@@ -17,17 +17,18 @@ h1,h2,h3,p,b,li,span
 {
 	font-family:'capsuularegular', Arial, sans-serif;
 }
-header,.pic
+header
 {
 	display: flex;
 	flex-wrap: wrap;
 }
-.pic
-{
+.pic {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     height: auto;
     align-items: center;
-}
+    }
 .titre
 {
 	width: 65%;
@@ -64,25 +65,9 @@ p,b
 	margin-left: 10%;
 	margin-right:10%;
 }
-ul
-{
-	list-style-type: none;
-
-}
-ul li::before
-{
-	content:"\25C2";
-	color: blue;
-	display:inline-block;
-	width: 1em;
-	margin-left:-1em;
-}
-ul li
-{
-	text-align: left;
-}
 li
 {
+	list-style: url("puce26.gif");
 	font-size:1em;
 	margin-left: 10%;
 }
@@ -186,8 +171,8 @@ iframe
 #colonne2 h3
 {
 	text-align: left;
-	margin-left:10%;
 	font-size: 2em;
+	margin-left:10%;
 	font-size:large;
 	color: #304FFE;
 }
@@ -242,22 +227,34 @@ iframe
 		width: 100%;
 		font-size:1em;
 	}
-	#colonne1 h3
+	.titre
 	{
-		margin-left: 10%;
+		min-width: 100%;
 	}
-	.titre,#colonne1,#colonne2,.conteners, .child
+	#colonne1
 	{
 		min-width: 100%;
 	}
 	#contacts
 	{
-		display: block;
-		text-align: center;		
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+		margin:auto;
+		text-align: center;
 	}
 	#contacts .fas
 	{
-		font-size: 1em;
+		font-size: 0.6em;
+	}
+	#colonne2
+	{
+		min-width: 100%;
+	}
+	.conteners, .child
+	{
+		min-width: 100%;
 	}
 }
 
