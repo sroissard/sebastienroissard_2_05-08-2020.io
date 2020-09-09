@@ -13,182 +13,165 @@
     font-weight: normal;
     font-style: normal;
 }
-h1,h2,h3,p,b,li,span
+p, h1,h2,h3,span,li
 {
-	font-family:'capsuularegular', Arial, sans-serif;
+	font-family: capsuularegular;
+}
+p
+{
+	font-size:1em;
+}
+header .pic, aside
+{
+	background-color: gold;
+	color:black;
+}
+aside h2
+{
+	text-align: center;
+	background-color: black;
+	color:gold;
+}
+body
+{
+	margin:0;
+	padding: 0;
 }
 header
 {
+	width:100%;
 	display: flex;
 	flex-wrap: wrap;
 }
-.pic {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: auto;
-    align-items: center;
-    }
+header h1,header h2
+{
+	margin-left:7%;
+}
 .titre
 {
-	width: 65%;
+	line-height: 1em;
 	background-color: white;
+	width:75%;
+	margin:auto;
+	
 }
-.photo /*cadre photo*/
+.titre h1
+{
+	font-size:3em;
+}
+.titre h1 span
+{
+ color:gold;
+}
+.titre h2 span
+{
+	text-decoration: underline gold;
+	text-underline-position: under;
+}
+.accroche
+{
+	font-size: 1em;
+	text-align: justify;
+	margin-left: 10%;
+	margin-right: 10%;
+	height:860px;
+}
+#crps
+{
+	display:flex;
+	
+}
+aside
+{
+	width:25%;
+}
+.contact h3, .contact p
+{
+	line-height: 0.4em;
+	margin-left:10%;
+}
+.mail
+{
+	color:black;
+	text-decoration: none;
+}
+
+.pic
+{
+    text-align: center;
+    background-color: red;
+	color:white;
+    width:25%;
+    justify-content: space-around;
+    height: auto;
+	
+	
+}
+.pic img /*cadre photo*/
 {
 	align-items: center;
-	height: 200px;
+	height: 150px;
 	margin-top:10px;
 	margin-bottom:10px;
 	margin-left: 10px;
 	margin-right: 10px;
-	border:8px solid silver;
-	box-shadow: 5px 5px 5px black;
+	border:1px solid gold;
+	box-shadow: 1px 1px 1px black;
 	border-radius: 120px;
 }
-.anchors
-{
-		display:none;
-}
-.page
-{
+.hobby
+{ 
 	display: flex;
-	border-radius: 10px;
+	justify-content: space-around;
 }
-a:visited
+.hobby [class*="fas"]
 {
-    color: #512DA8;
+	font-size:1.3em;
+	display:box;
+	border:2px solid black;
+	padding:20px;
+	border-radius: 40px;
 }
-p,b
+#colonne
 {
-	font-size:1em;
-	margin-left: 10%;
-	margin-right:10%;
-}
-li
-{
-	list-style: url("puce26.gif");
-	font-size:1em;
-	margin-left: 10%;
-}
-i
-{
-	display: inline-block;
-	width: 100%;
-	vertical-align:middle;
-}
-h1
-{
-	text-align: center;
-	font-size:2.9em ;
-	color: #304FFE;
-	text-shadow: 3px 3px 3px silver;
-}
-h2
-{
-	text-align: center;
-	font-size: 2em;
-	background-color:white;
-	color:#304FFE;
-	width: 100%;
-	text-shadow: 3px 3px 3px silver;
-}
-
-/* paramètres de la première colonne */
-
-#colonne1, .pic
-{
-	width: 35%;
-	background-color: #304FFE;
-}
-#colonne1 p,b
-{
-	color: white;
-}
-#colonne1 a
-{
-	background-color: #304FFE;
-}
-#colonne1 h3
-{
-	text-align: left;
-	font-size:2em;
-	margin-left:10%;
-	font-size:large;
-	color:white;
-	width: 100%;
-	text-shadow: 1px 1px 1px black;
-}
-
-.accroche
-{
-	font-family:'capsuularegular', Arial, sans-serif;
-	font-size:1.5em;
-	text-align:justify;
-}
-#carte_google
-{
-	border: 3px solid white;
+	width: 70%;
+	border:1px solid green;
 	margin-left:5%;
-	margin-right:5%;
-}
-iframe
-{
-	width: 90%;
-	height: 200px;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-}
-.mail
-{
-	color:white;
-}
-.hobby p
-{
-	text-align: left;
-	color:white;
-}
 
-/* paramètres de la deuxième colonne */
-
-#colonne2
-{
-	width: 65%;
-	background-color: white;
-}
-#colonne2 p,b
-{
-	color:#3F51B5;
-}
-#colonne2 h2
-{
-	text-align: center;
-	font-size: 2em;
-	background-color:white;
-	color: #304FFE;
-}
-#colonne2 h3
-{
-	text-align: left;
-	font-size: 2em;
-	margin-left:10%;
-	font-size:large;
-	color: #304FFE;
 }
 .contener
 {
 	display:flex;
-	flex-wrap:wrap;
-	background:white;
+	border:1px solid blue;
+	
 }
-.contener .child
+#child
 {
-	width:50%;
+	width: 50%;
+	border: 1px solid red;
+	
 }
-@media all and (max-width:780px)
+#child h3
 {
-	header
+	text-align: left;
+}
+#colonne h2
+{
+	color:gold;
+}
+#colonne h2 span
+{
+	color:black;
+}
+
+a:visited
+{
+    color: #512DA8;
+}
+
+@media all and (max-width:780px) /*breakpoint, pour le viewport*/
+{
+	header, .page
 	{
 		display: flex;
 		flex-direction: column;
@@ -197,18 +180,12 @@ iframe
 	{
 		height: 150px;
 	}
-
-	.page
-	{
-		display: flex;
-		flex-direction: column;
-	}
 	.pic
 	{
 		display:flex;
 		min-width: 100%;
 	}
-	.anchors
+	.anchors /*les liens apparaissent dans cette config*/
 	{
 		display:flex;
 		justify-content: space-around;
@@ -227,34 +204,22 @@ iframe
 		width: 100%;
 		font-size:1em;
 	}
-	.titre
+	#colonne1 h3
 	{
-		min-width: 100%;
+		margin-left: 10%;
 	}
-	#colonne1
+	.titre,#colonne1,#colonne2,.conteners, .child
 	{
 		min-width: 100%;
 	}
 	#contacts
 	{
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		align-content: center;
-		margin:auto;
-		text-align: center;
+		display: block;
+		text-align: center;		
 	}
 	#contacts .fas
 	{
-		font-size: 0.6em;
-	}
-	#colonne2
-	{
-		min-width: 100%;
-	}
-	.conteners, .child
-	{
-		min-width: 100%;
+		font-size: 1em;
 	}
 }
 
