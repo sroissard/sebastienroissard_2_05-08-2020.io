@@ -1,0 +1,284 @@
+
+/* paramètres generaux */
+
+
+@font-face {
+    font-family: 'capsuularegular';
+    src: url('fonts/Capsuula-webfont.eot');
+    src: url('fonts/Capsuula-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Capsuula-webfont.woff2') format('woff2'),
+         url('fonts/Capsuula-webfont.woff') format('woff'),
+         url('fonts/Capsuula-webfont.ttf') format('truetype'),
+         url('fonts/Capsuula-webfont.svg#capsuularegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+p, h1,h2,h3,span,li, [class*="child"] b
+{
+	font-family: capsuularegular;
+}
+p
+{
+	font-size:1em;
+}
+header .pic, aside
+{
+	background-color: #005DFF;
+	color:white;
+}
+aside h2
+{
+	text-align: center;
+	background-color: white;
+	color:#005DFF;
+}
+body
+{
+	margin:0;
+	padding: 0;
+}
+header
+{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+header h1,header h2
+{
+	margin-left:7%;
+}
+.titre
+{
+	line-height: 1em;
+	background-color: white;
+	width:70%;
+	margin:auto;
+	
+}
+.titre h1
+{
+	font-size:3em;
+}
+.titre h1 span
+{
+ color:#005DFF;
+}
+.titre h2 span
+{
+	text-decoration: underline #005DFF;
+	text-underline-position: under;
+}
+.accroche
+{
+	font-size: 1em;
+	text-align: justify;
+	margin-left: 10%;
+	margin-right: 10%;
+	height:770px;
+}
+#crps
+{
+	display:flex;
+	
+}
+aside
+{
+	width:30%;
+}
+.contact h3, .contact p
+{
+	line-height: 0.4em;
+	margin-left:10%;
+}
+.mail, a
+{
+	color:white;
+	text-decoration: none;
+}
+
+.pic
+{
+    text-align: center;
+    color:white;
+    width:30%;
+    justify-content: space-around;
+    height: auto;
+	
+	
+}
+.pic img /*cadre photo*/
+{
+	align-items: center;
+	height: 150px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid #005DFF;
+	box-shadow: 1px 1px 1px black;
+	border-radius: 120px;
+}
+.hobby
+{ 
+	display: flex;
+	justify-content: space-around;
+}
+.hobby [class*="fas"]
+{
+	font-size:1.3em;
+	border:2px solid white;
+	padding:20px;
+	border-radius: 40px;
+}
+#colonne
+{
+	width: 65%;
+	margin-left: 5%;
+}
+.contener
+{
+	display:flex;
+}
+.contener .child2
+	{
+		margin-right: 10%;
+	}
+.contener .child2 a
+{
+	color:black;
+}
+.sect
+{
+	border-top:2px solid #005DFF;
+	padding-top: 1em;
+	padding-bottom:1em;
+	line-height: 1em;
+}
+.child, .child1
+{
+	width: 40%;
+}
+.child p, .child1 p
+{
+	margin-left: 2.5em;
+}
+.child ul, .child1 ul
+{
+	list-style:none;
+}
+.child li::before
+{
+	content: "\2022";
+	font-size:2em;
+	color: #005DFF;
+  	display: inline-block; width: 1em;
+  	vertical-align: middle;
+  	margin-left: -1em
+
+}
+.child1 li::before
+{
+	content: "\29BF";
+	color: #005DFF;
+  	display: inline-block; width: 2em;
+  	margin-left: -2em
+}
+.child2
+{
+	width: 60%;
+	padding-top:1em;
+
+}
+[class*="child"] h3
+{
+	text-align: left;
+}
+.child3
+{
+	width:50%;
+	font-size:0.8em;
+	line-height: 0.5em;
+}
+#colonne h2
+{
+	color:#005DFF;
+}
+#colonne h2 span
+{
+	color:black;
+}
+
+a:visited
+{
+    color: #512DA8;
+}
+@media all and (max-width:780px) /*breakpoint, pour le viewport*/
+{
+	header, #crps
+	{
+		display: flex;
+		flex-direction: column;
+	}
+	.titre h1
+	{
+		font-size:1.5em;
+	}
+	.pic
+	{
+		width:100%;
+	}
+	.pic img
+	{
+		height: 70px;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	p,b,h2,h3
+	{
+		font-size:0.8em;
+	}
+	aside
+	{
+		width:100%;
+		display:flex;
+		flex-direction:column;
+	}	
+	aside h2
+	{
+		width:100%;
+	}
+
+	aside .contact
+	{
+		width:100%;
+		display:flex;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+	.contact p
+	{
+		line-height: 1em;
+	}
+	.contact br
+	{
+		display: none;
+	}
+	.accroche
+	{
+		height: auto;
+	}
+	.hobby
+	{ 
+		display: flex;
+		justify-content: space-around;
+	}
+	.hobby [class*="fas"]
+	{
+		font-size:1em;
+		padding:10px;
+	}
+	#colonne
+	{
+		width:100%;
+	}
+}
