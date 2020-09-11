@@ -35,7 +35,7 @@ aside h2
 body
 {
 	margin:0;
-	padding: 0;
+	padding:0;
 }
 header
 {
@@ -79,7 +79,6 @@ header h1,header h2
 #crps
 {
 	display:flex;
-	
 }
 aside
 {
@@ -103,8 +102,6 @@ aside
     width:30%;
     justify-content: space-around;
     height: auto;
-	
-	
 }
 .pic img /*cadre photo*/
 {
@@ -133,9 +130,9 @@ aside
 #colonne
 {
 	width: 65%;
-	margin-left: 5%;
+	margin-left:5%;
 }
-.contener
+.contener, .contener_f
 {
 	display:flex;
 }
@@ -154,19 +151,19 @@ aside
 	padding-bottom:1em;
 	line-height: 1em;
 }
-.child, .child1
+.child0, .child1
 {
-	width: 40%;
+	width: 30%;
 }
-.child p, .child1 p
+.child0 p, .child1 p
 {
 	margin-left: 2.5em;
 }
-.child ul, .child1 ul
+.child0 ul, .child1 ul
 {
 	list-style:none;
 }
-.child li::before
+.child0 li::before
 {
 	content: "\2022";
 	font-size:2em;
@@ -214,46 +211,29 @@ a:visited
 }
 @media all and (max-width:780px) /*breakpoint, pour le viewport*/
 {
-	header, #crps
+	header, #crps, aside, aside .contact, .contener
 	{
-		display: flex;
 		flex-direction: column;
 	}
 	.titre h1
 	{
 		font-size:1.5em;
 	}
-	.pic
+	.pic, .contener, aside h2, aside, aside .contact, [class*="child"]
 	{
 		width:100%;
 	}
 	.pic img
 	{
 		height: 70px;
-		margin-top:10px;
-		margin-bottom:10px;
 	}
 	p,b,h2,h3
 	{
 		font-size:0.8em;
 	}
-	aside
+	aside .contact, .hobby
 	{
-		width:100%;
-		display:flex;
-		flex-direction:column;
-	}	
-	aside h2
-	{
-		width:100%;
-	}
-
-	aside .contact
-	{
-		width:100%;
-		display:flex;
 		justify-content: space-around;
-		flex-direction: column;
 	}
 	.contact p
 	{
@@ -267,18 +247,21 @@ a:visited
 	{
 		height: auto;
 	}
-	.hobby
-	{ 
-		display: flex;
-		justify-content: space-around;
-	}
 	.hobby [class*="fas"]
 	{
 		font-size:1em;
-		padding:10px;
 	}
 	#colonne
 	{
-		width:100%;
+		width:95%;
+	}
+	[class*="child2"]
+	{
+		text-align: center;
+		margin-right:5%;
+	}
+	[class*="child"] p
+	{
+		margin-right: 5%;
 	}
 }
