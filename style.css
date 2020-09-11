@@ -13,7 +13,7 @@
     font-weight: normal;
     font-style: normal;
 }
-p, h1,h2,h3,span,li
+p, h1,h2,h3,span,li, [class*="child"] b
 {
 	font-family: capsuularegular;
 }
@@ -23,14 +23,14 @@ p
 }
 header .pic, aside
 {
-	background-color: gold;
-	color:black;
+	background-color: #005DFF;
+	color:white;
 }
 aside h2
 {
 	text-align: center;
-	background-color: black;
-	color:gold;
+	background-color: white;
+	color:#005DFF;
 }
 body
 {
@@ -51,7 +51,7 @@ header h1,header h2
 {
 	line-height: 1em;
 	background-color: white;
-	width:75%;
+	width:70%;
 	margin:auto;
 	
 }
@@ -61,11 +61,11 @@ header h1,header h2
 }
 .titre h1 span
 {
- color:gold;
+ color:#005DFF;
 }
 .titre h2 span
 {
-	text-decoration: underline gold;
+	text-decoration: underline #005DFF;
 	text-underline-position: under;
 }
 .accroche
@@ -74,7 +74,7 @@ header h1,header h2
 	text-align: justify;
 	margin-left: 10%;
 	margin-right: 10%;
-	height:860px;
+	height:770px;
 }
 #crps
 {
@@ -83,25 +83,24 @@ header h1,header h2
 }
 aside
 {
-	width:25%;
+	width:30%;
 }
 .contact h3, .contact p
 {
 	line-height: 0.4em;
 	margin-left:10%;
 }
-.mail
+.mail, a
 {
-	color:black;
+	color:white;
 	text-decoration: none;
 }
 
 .pic
 {
     text-align: center;
-    background-color: red;
-	color:white;
-    width:25%;
+    color:white;
+    width:30%;
     justify-content: space-around;
     height: auto;
 	
@@ -113,9 +112,9 @@ aside
 	height: 150px;
 	margin-top:10px;
 	margin-bottom:10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	border:1px solid gold;
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid #005DFF;
 	box-shadow: 1px 1px 1px black;
 	border-radius: 120px;
 }
@@ -127,37 +126,82 @@ aside
 .hobby [class*="fas"]
 {
 	font-size:1.3em;
-	display:box;
-	border:2px solid black;
+	border:2px solid white;
 	padding:20px;
 	border-radius: 40px;
 }
 #colonne
 {
-	width: 70%;
-	border:1px solid green;
-	margin-left:5%;
-
+	width: 65%;
+	margin-left: 5%;
 }
 .contener
 {
 	display:flex;
-	border:1px solid blue;
-	
 }
-#child
+.contener .child2
+	{
+		margin-right: 10%;
+	}
+.contener .child2 a
 {
-	width: 50%;
-	border: 1px solid red;
-	
+	color:black;
 }
-#child h3
+.sect
+{
+	border-top:2px solid #005DFF;
+	padding-top: 1em;
+	padding-bottom:1em;
+	line-height: 1em;
+}
+.child, .child1
+{
+	width: 40%;
+}
+.child p, .child1 p
+{
+	margin-left: 2.5em;
+}
+.child ul, .child1 ul
+{
+	list-style:none;
+}
+.child li::before
+{
+	content: "\2022";
+	font-size:2em;
+	color: #005DFF;
+  	display: inline-block; width: 1em;
+  	vertical-align: middle;
+  	margin-left: -1em
+
+}
+.child1 li::before
+{
+	content: "\29BF";
+	color: #005DFF;
+  	display: inline-block; width: 2em;
+  	margin-left: -2em
+}
+.child2
+{
+	width: 60%;
+	padding-top:1em;
+
+}
+[class*="child"] h3
 {
 	text-align: left;
 }
+.child3
+{
+	width:50%;
+	font-size:0.8em;
+	line-height: 0.5em;
+}
 #colonne h2
 {
-	color:gold;
+	color:#005DFF;
 }
 #colonne h2 span
 {
@@ -168,60 +212,73 @@ a:visited
 {
     color: #512DA8;
 }
-
 @media all and (max-width:780px) /*breakpoint, pour le viewport*/
 {
-	header, .page
+	header, #crps
 	{
 		display: flex;
 		flex-direction: column;
 	}
-	.photo /*cadre photo*/
-	{
-		height: 150px;
-	}
-	.pic
-	{
-		display:flex;
-		min-width: 100%;
-	}
-	.anchors /*les liens apparaissent dans cette config*/
-	{
-		display:flex;
-		justify-content: space-around;
-		text-align: center;
-		font-family:'capsuularegular', Arial, sans-serif;
-		font-size: 1.3em;
-		color: #304FFE;
-		margin-bottom: 10px;
-	}
-	h1
+	.titre h1
 	{
 		font-size:1.5em;
 	}
-	h2
+	.pic
 	{
-		width: 100%;
+		width:100%;
+	}
+	.pic img
+	{
+		height: 70px;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	p,b,h2,h3
+	{
+		font-size:0.8em;
+	}
+	aside
+	{
+		width:100%;
+		display:flex;
+		flex-direction:column;
+	}	
+	aside h2
+	{
+		width:100%;
+	}
+
+	aside .contact
+	{
+		width:100%;
+		display:flex;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+	.contact p
+	{
+		line-height: 1em;
+	}
+	.contact br
+	{
+		display: none;
+	}
+	.accroche
+	{
+		height: auto;
+	}
+	.hobby
+	{ 
+		display: flex;
+		justify-content: space-around;
+	}
+	.hobby [class*="fas"]
+	{
 		font-size:1em;
+		padding:10px;
 	}
-	#colonne1 h3
+	#colonne
 	{
-		margin-left: 10%;
-	}
-	.titre,#colonne1,#colonne2,.conteners, .child
-	{
-		min-width: 100%;
-	}
-	#contacts
-	{
-		display: block;
-		text-align: center;		
-	}
-	#contacts .fas
-	{
-		font-size: 1em;
+		width:100%;
 	}
 }
-
-
-
