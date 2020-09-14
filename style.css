@@ -76,7 +76,7 @@ header h1,header h2
 	margin-right: 10%;
 	height:770px;
 }
-#crps
+main
 {
 	display:flex;
 }
@@ -144,7 +144,7 @@ aside
 {
 	color:black;
 }
-.sect
+section
 {
 	border-top:2px solid #005DFF;
 	padding-top: 1em;
@@ -211,7 +211,7 @@ a:visited
 }
 @media all and (max-width:780px) /*breakpoint, pour le viewport*/
 {
-	header, #crps, aside, aside .contact, .contener
+	header, main, aside, aside .contact, .contener
 	{
 		flex-direction: column;
 	}
