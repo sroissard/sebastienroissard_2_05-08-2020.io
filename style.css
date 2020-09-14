@@ -53,7 +53,6 @@ header h1,header h2
 	background-color: white;
 	width:70%;
 	margin:auto;
-	
 }
 .titre h1
 {
@@ -70,13 +69,14 @@ header h1,header h2
 }
 .accroche
 {
-	font-size: 1em;
+	font-size: 1.2em;
 	text-align: justify;
+	line-height: 1.5em;
 	margin-left: 10%;
-	margin-right: 10%;
+	margin-right: 20%;
 	height:770px;
 }
-main
+article
 {
 	display:flex;
 }
@@ -84,9 +84,8 @@ aside
 {
 	width:30%;
 }
-.contact h3, .contact p
+aside h3, aside p
 {
-	line-height: 0.4em;
 	margin-left:10%;
 }
 .mail, a
@@ -94,7 +93,10 @@ aside
 	color:white;
 	text-decoration: none;
 }
-
+aside .contact p, aside .contact h3
+{
+	line-height: 0.4em;
+}
 .pic
 {
     text-align: center;
@@ -115,6 +117,10 @@ aside
 	box-shadow: 1px 1px 1px black;
 	border-radius: 120px;
 }
+.contact
+{
+	margin-left:10%;
+}
 .hobby
 { 
 	display: flex;
@@ -127,12 +133,12 @@ aside
 	padding:20px;
 	border-radius: 40px;
 }
-#colonne
+section
 {
 	width: 65%;
 	margin-left:5%;
 }
-.contener, .contener_f
+.contener, .contener_f, .contener0
 {
 	display:flex;
 }
@@ -144,11 +150,10 @@ aside
 {
 	color:black;
 }
-section
+.contener0, .contener_f  
 {
 	border-top:2px solid #005DFF;
-	padding-top: 1em;
-	padding-bottom:1em;
+	padding-top: 2em;
 	line-height: 1em;
 }
 .child0, .child1
@@ -196,11 +201,11 @@ section
 	font-size:0.8em;
 	line-height: 0.5em;
 }
-#colonne h2
+section h2
 {
 	color:#005DFF;
 }
-#colonne h2 span
+section h2 span
 {
 	color:black;
 }
@@ -211,17 +216,25 @@ a:visited
 }
 @media all and (max-width:780px) /*breakpoint, pour le viewport*/
 {
-	header, main, aside, aside .contact, .contener
+	body, main, article, aside, .contener0, .contener
 	{
 		flex-direction: column;
+	}
+	aside
+	{
+		width:100%;
 	}
 	.titre h1
 	{
 		font-size:1.5em;
 	}
-	.pic, .contener, aside h2, aside, aside .contact, [class*="child"]
+	.pic, .contener, [class*="child"]
 	{
 		width:100%;
+	}
+	section
+	{
+		width: 95%
 	}
 	.pic img
 	{
@@ -231,7 +244,11 @@ a:visited
 	{
 		font-size:0.8em;
 	}
-	aside .contact, .hobby
+	.contact
+	{
+		margin-left: 0%;
+	}
+	.contact, .hobby
 	{
 		justify-content: space-around;
 	}
@@ -245,15 +262,16 @@ a:visited
 	}
 	.accroche
 	{
+		font-size: 1em;
+		text-align: justify;
+		line-height: 1em;
+		margin-left: auto;
+		margin-right: 10%;
 		height: auto;
 	}
 	.hobby [class*="fas"]
 	{
 		font-size:1em;
-	}
-	#colonne
-	{
-		width:95%;
 	}
 	[class*="child2"]
 	{
