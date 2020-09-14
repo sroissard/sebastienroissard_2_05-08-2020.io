@@ -1,26 +1,26 @@
 <!doctype html>
 <html lang="fr">	
-	<head>
+	<head><!-- definition des paramètres de la page -->
 		<meta charset="utf-8"/><!-- format linguistique -->
-		<meta name="viewport" content="width=device-width"><!-- parametre d'affichage en fonction de la largeur d'ecran -->
-		<link rel="stylesheet" href="style.css" /><!--liaison avec le document CSS connexe -->
-		<link rel="stylesheet" media="all and (max-width:780px)" href="style.css"><!-- parametre du breakpoint -->
+		<meta name="viewport" content="width=device-width"><!-- parametre d'affichage en fonction de la largeur d'ecran propre à l'utilisateur -->
+		<link rel="stylesheet" href="style.css" /><!--liaison avec le document CSS connexe --><!-- utilisation de la balise LINK -->
+		<link rel="stylesheet" media="all and (max-width:780px)" href="style.css"><!-- parametre du breakpoint --><!-- utilisation de la balise LINK --><!-- utilisation de la balise MEDIA -->
 		<script src="https://kit.fontawesome.com/e00c43bc4b.js" crossorigin="anonymous"></script><!-- integration de font-awesome pour les icones -->
 		<title>CURRICULUM VITAE</title><!-- attribution du texte de l'onglet -->
     </head>
     <body>
-        <header>
+        <header><!-- Entête du document -->
 			<div class="pic">
-				<img src="images/portrait.jpg" alt="portrait">
+				<img src="images/portrait.jpg" alt="portrait"><!-- integration d'une image -->
 			</div>
 			<div class="titre">
 				<h1><span>SEBASTIEN</span>&ensp;ROISSARD</h1>
                 <h2><span>Dével</span>oppeur web junior</h2>
 			</div>	
 		</header>
-        <main>
-            <article>
-                <aside>
+        <main><!-- contenu propre à la page SANS l'association parent-enfant de aside-->
+            <article><!-- contenu propre à la page AVEC l'association parent-enfant de aside-->
+                <aside><!-- contenu détaché de la structure principale de la page -->
                     <h2>CONTACTS</h2>
                     <div class="contact">
                         <br/>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="contact">
                         <h3>Adresse mail:</h3>
-                        <p><a class="mail" href="mailto:sroissard@hotmail.com">sroissard@hotmail.com</a></p>
+                        <p><a class="mail" href="mailto:sroissard@hotmail.com">sroissard@hotmail.com</a></p><!-- lien mail -->
                         <br/>
                     </div>
                     <div class="contact">
@@ -67,7 +67,7 @@
 				        <br />
                     </div>
                 </aside>
-                <section>
+                <section><!-- Contenu associé à la structure de titre de la page -->
                     <h2 class="fas fa-graduation-cap" id="formation" title="Formation">&ensp;<span>FORMATION</span></h2>
                     <div class="contener0">
                         <div class="child1">
@@ -195,7 +195,7 @@
                         </div>
                     </div>
                     <h2 class="fas fa-pen" id="RECOMMANDATIONS" title="RECOMMANDATIONS">&ensp;<span>RECOMMANDATIONS</span></h2>
-                    <div class="contener_f">
+                    <div class="contener_f"><!-- pas de FOOTER en raison du type de mise en page-->
                         <div class="child3">
                             <b>AUTOGRILL COTE FRANCE</b>
                             <P>PARPET Thierry, Isle D'Abeau</P>

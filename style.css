@@ -2,7 +2,8 @@
 /* paramètres generaux */
 
 
-@font-face {
+@font-face /* intégration d'une police */
+{
     font-family: 'capsuularegular';
     src: url('fonts/Capsuula-webfont.eot');
     src: url('fonts/Capsuula-webfont.eot?#iefix') format('embedded-opentype'),
@@ -23,13 +24,13 @@ p
 }
 header .pic, aside
 {
-	background-color: #005DFF;
+	background-color: #005DFF;/* définition de l'arrière-plan bleu */
 	color:white;
 }
 aside h2
 {
 	text-align: center;
-	background-color: white;
+	background-color: white;/* définition de l'arrière-plan blanc */
 	color:#005DFF;
 }
 body
@@ -50,7 +51,7 @@ header h1,header h2
 .titre
 {
 	line-height: 1em;
-	background-color: white;
+	background-color: white;/* définition de l'arrière-plan blanc */
 	width:70%;
 	margin:auto;
 }
@@ -114,8 +115,8 @@ aside .contact p, aside .contact h3
 	margin-left: auto;
 	margin-right: auto;
 	border:1px solid #005DFF;
-	box-shadow: 1px 1px 1px black;
-	border-radius: 120px;
+	box-shadow: 1px 1px 1px black;/* intégration d'une ombre portée du cadre */
+	border-radius: 120px;/* définition de l'arrondi de la photo */
 }
 .contact
 {
@@ -131,7 +132,8 @@ aside .contact p, aside .contact h3
 	font-size:1.3em;
 	border:2px solid white;
 	padding:20px;
-	border-radius: 40px;
+	border-radius: 40px;/* définition de l'arrondi du cadre autour des icones F-Awesome */
+}
 }
 section
 {
@@ -234,6 +236,7 @@ a:visited
 	}
 	section
 	{
+		margin-left: 5%;
 		width: 95%
 	}
 	.pic img
