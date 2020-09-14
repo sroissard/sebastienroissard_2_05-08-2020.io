@@ -75,7 +75,7 @@ header h1,header h2
 	line-height: 1.5em;
 	margin-left: 10%;
 	margin-right: 20%;
-	height:770px;
+	height:750px;
 }
 article
 {
@@ -134,7 +134,6 @@ aside .contact p, aside .contact h3
 	padding:20px;
 	border-radius: 40px;/* définition de l'arrondi du cadre autour des icones F-Awesome */
 }
-}
 section
 {
 	width: 65%;
@@ -152,10 +151,13 @@ section
 {
 	color:black;
 }
-.contener0, .contener_f  
+.contener0, .contener_f
 {
 	border-top:2px solid #005DFF;
 	padding-top: 2em;
+}
+[class*="contener"]
+{
 	line-height: 1em;
 }
 .child0, .child1
