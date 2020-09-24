@@ -27,7 +27,7 @@ header .pic, aside
 	background-color: #005DFF;/* définition de l'arrière-plan bleu */
 	color:white;
 }
-aside h2
+aside h2, #foot1 h2
 {
 	text-align: center;
 	background-color: white;/* définition de l'arrière-plan blanc */
@@ -75,7 +75,6 @@ header h1,header h2
 	line-height: 1.5em;
 	margin-left: 10%;
 	margin-right: 20%;
-	height:750px;
 }
 article
 {
@@ -122,22 +121,18 @@ aside .contact p, aside .contact h3
 {
 	margin-left:10%;
 }
-.hobby
-{ 
-	display: flex;
-	justify-content: space-around;
-}
-.hobby [class*="fas"]
-{
-	font-size:1.3em;
-	border:2px solid white;
-	padding:20px;
-	border-radius: 40px;/* définition de l'arrondi du cadre autour des icones F-Awesome */
-}
 section
 {
 	width: 65%;
 	margin-left:5%;
+}
+section h2
+{
+	color:#005DFF;
+}
+section h2 span
+{
+	color:black;
 }
 .contener, .contener_f, .contener0
 {
@@ -174,7 +169,7 @@ section
 }
 .child0 li::before
 {
-	content: "\2022";
+	content: "\2022";/*texte unicode*/
 	font-size:2em;
 	color: #005DFF;
   	display: inline-block; width: 1em;
@@ -205,22 +200,83 @@ section
 	font-size:0.8em;
 	line-height: 0.5em;
 }
-section h2
-{
-	color:#005DFF;
-}
-section h2 span
-{
-	color:black;
-}
-
 a:visited
 {
     color: #512DA8;
 }
+footer
+{
+	display:flex;
+	
+}
+.foot
+{
+	display:none;
+}
+.foot1
+{
+	
+	margin-left:0px;
+	width: 30%;
+}
+.foot1 h2
+{
+	text-align: center;
+	color:#005DFF;
+	position: relative;
+	bottom:15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 0.8em;
+
+}
+.hobby
+{ 
+	background-color:blue;
+	padding-top: 32px;
+	padding-bottom:32px;
+	
+	background-color: #005DFF;
+	display: flex;
+	justify-content: space-around;
+	
+}
+.hobby [class*="fas"]
+{
+	color:white;
+	font-size:1.3em;
+	border:2px solid white;
+	padding:20px;
+	border-radius: 40px;/* définition de l'arrondi du cadre autour des icones F-Awesome */
+}
+#foot2
+{
+	margin-left:5%;
+	width: 65%;
+}
+#foot2 [class*="fas"]
+{
+    color: #005dff;
+}
+#foot2 h2 span
+{
+	color:black;
+}
 @media all and (max-width:780px) /*breakpoint, pour le viewport*/
 {
-	body, main, article, aside, .contener0, .contener
+	.foot
+	{
+		display:contents;
+	}
+	.foot1
+	{
+		display:none;
+	}
+	#foot2
+	{
+		width: 95%
+	}
+	body, main, article, aside, .contener0, .contener, footer
 	{
 		flex-direction: column;
 	}
