@@ -65,7 +65,7 @@ header h1,header h2
 }
 .titre h2 span
 {
-	text-decoration: underline #005DFF;
+	text-decoration: underline #005DFF;/*definition du soulignement partiel avec span*/
 	text-underline-position: under;
 }
 .accroche
@@ -165,9 +165,9 @@ section h2 span
 }
 .child0 ul, .child1 ul
 {
-	list-style:none;
+	list-style:none;/*suppression des puces natives*/
 }
-.child0 li::before
+.child0 li::before/*ajout de puces personnalisées*/
 {
 	content: "\2022";/*texte unicode*/
 	font-size:2em;
@@ -232,11 +232,10 @@ footer
 }
 .hobby
 { 
-	background-color:blue;
 	padding-top: 32px;
 	padding-bottom:32px;
 	
-	background-color: #005DFF;
+	background-color: #005DFF;/*définition de l'arrière-plan bleu*/
 	display: flex;
 	justify-content: space-around;
 	
